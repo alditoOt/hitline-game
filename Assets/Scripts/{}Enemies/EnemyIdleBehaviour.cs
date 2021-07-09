@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrolBehaviour : StateMachineBehaviour
+public class EnemyIdleBehaviour : StateMachineBehaviour
 {
-    private EnemyPatrol enemyPatrolScript;
+    private EnemyIdle enemyPatrolScript;
+    public bool staticEnemy, patrollingEnemy;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyPatrolScript = animator.GetComponent<EnemyPatrol>();    
+        enemyPatrolScript = animator.GetComponent<EnemyIdle>();    
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyPatrolScript.PatrolSpot();    
+       enemyPatrolScript.PatrolSpot();    
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
