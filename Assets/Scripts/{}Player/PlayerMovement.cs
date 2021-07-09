@@ -15,11 +15,13 @@ public class PlayerMovement : MonoBehaviour
 
     #region components
     private Rigidbody2D rb;
+    private Animator anim;
     #endregion
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     void DoMove()
     {
         rb.velocity = new Vector2(move.x * moveSpeed, move.y * moveSpeed);
+        anim.SetFloat("speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
     }
 
     #endregion
