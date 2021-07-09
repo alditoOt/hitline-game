@@ -7990,10 +7990,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 6335240528286495767, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
 --- !u!1001 &8805831165425388190
@@ -8003,14 +7999,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8805831165339097918, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.189
-      objectReference: {fileID: 0}
-    - target: {fileID: 8805831165339097918, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.286
-      objectReference: {fileID: 0}
     - target: {fileID: 8805831166342298306, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
       propertyPath: patrolSpots.Array.data[0]
       value: 

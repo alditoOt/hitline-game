@@ -14,7 +14,7 @@ public class EnemyDead : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Bullet"))
+        if(collision.gameObject.CompareTag("PlayerBullet"))
         {
             anim.SetBool("Dead", true);
             Destroy(collision.gameObject);
