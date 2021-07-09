@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this);
+        var wall = collision.gameObject.layer;
+        Debug.Log("hit");
+        if (wall == 8)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

@@ -11,9 +11,10 @@ public class EnemyDead : MonoBehaviour
         anim = GetComponent<Animator>();
         pc = GetComponent<PolygonCollider2D>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Bullet"))
+        if(collision.gameObject.CompareTag("Bullet"))
         {
             anim.SetBool("Dead", true);
             Destroy(collision.gameObject);
