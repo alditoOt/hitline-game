@@ -20,10 +20,9 @@ public class EnemyFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Follow();
     }
 
-    void Follow()
+    public void Follow()
     {
         Vector2 lookDir = target.position - transform.position;
         if(Vector2.Distance(transform.position, target.position) > approachDistance)

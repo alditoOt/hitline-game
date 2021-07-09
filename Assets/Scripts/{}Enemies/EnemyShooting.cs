@@ -17,10 +17,10 @@ public class EnemyShooting : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Shoot();
+
     }
 
-    void Shoot()
+    public void Shoot()
     {
         if(fireRate <= 0)
         {
@@ -34,4 +34,5 @@ public class EnemyShooting : MonoBehaviour
             fireRate -= Time.deltaTime;
         }
     }
+
 }
