@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyIdleBehaviour : StateMachineBehaviour
 {
     private EnemyIdle enemyPatrolScript;
-    public bool staticEnemy, patrollingEnemy;
+   // public bool staticEnemy, patrollingEnemy;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

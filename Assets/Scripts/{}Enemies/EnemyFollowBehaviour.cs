@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyFollowBehaviour : StateMachineBehaviour
 {
     private EnemyFollow enemyFollowScript;
+
     private EnemyShooting enemyShootingScript;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -17,7 +18,7 @@ public class EnemyFollowBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyFollowScript.Follow();
+        enemyFollowScript.PathMove();
         enemyShootingScript.Shoot();
     }
 

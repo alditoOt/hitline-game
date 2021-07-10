@@ -11,6 +11,7 @@ public class EnemyIdle : MonoBehaviour
 
     private int spotCounter = 0;
     public Transform[] patrolSpots;
+    public Transform spotLook;
 
     private Rigidbody2D rb;
     private void Start()
@@ -25,7 +26,7 @@ public class EnemyIdle : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, patrolSpots[spotCounter].position, speed * Time.deltaTime);
 
-            Vector2 lookDir = patrolSpots[spotCounter].position - transform.position;
+            Vector2 lookDir = spotLook.position - transform.position;
             float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
             rb.rotation = angle;
 
