@@ -54,6 +54,7 @@ public class EnemyFollow : MonoBehaviour
         {
             reachedEndOfPath = false;
         }
+        PathMove();
     }
 
     void OnPathComplete(Path p)
@@ -68,15 +69,11 @@ public class EnemyFollow : MonoBehaviour
     public void PathMove()
     {
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)path.vectorPath[currentWaypoint], speed * Time.deltaTime);
-        //Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        //Vector2 force = direction * speed * Time.deltaTime;
-        
+       
         Vector2 lookDir = target.position - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
         
-        //rb.AddForce(force);
-
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
         if(distance < nextWaypointDistance)
@@ -84,6 +81,7 @@ public class EnemyFollow : MonoBehaviour
             currentWaypoint++;
         }
     }
+
 
     /*public void Follow()
     {
