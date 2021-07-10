@@ -15,11 +15,6 @@ public class EnemyShooting : MonoBehaviour
         fireRate = startingFireRate;
     }
 
-    private void FixedUpdate()
-    {
-
-    }
-
     public void Shoot()
     {
         if(fireRate <= 0)

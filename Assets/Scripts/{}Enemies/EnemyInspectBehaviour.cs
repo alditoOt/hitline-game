@@ -2,30 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollowBehaviour : StateMachineBehaviour
+public class EnemyInspectBehaviour : StateMachineBehaviour
 {
-    private EnemyFollow enemyFollowScript;
-
-    private EnemyShooting enemyShootingScript;
+    private EnemyInspect enemyInspectScript;
+    //private EnemyShooting enemyShootingScript;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyFollowScript = animator.GetComponent<EnemyFollow>();
-        enemyFollowScript.enabled = true;
-        enemyShootingScript = animator.GetComponent<EnemyShooting>();
+        enemyInspectScript = animator.GetComponent<EnemyInspect>();
+        enemyInspectScript.enabled = true;
+        //enemyShootingScript = animator.GetComponent<EnemyShooting>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyShootingScript.Shoot();
+       // enemyShootingScript.Shoot();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemyFollowScript.enabled = false;    
+        enemyInspectScript.enabled = false;    
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

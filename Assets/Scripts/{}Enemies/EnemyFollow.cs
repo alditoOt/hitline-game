@@ -6,9 +6,6 @@ using Pathfinding;
 public class EnemyFollow : MonoBehaviour
 {
     public float speed;
-    //public float approachDistance;
-    //public float retreatDistance;
-
     public float nextWaypointDistance = 3f;
     Path path;
     int currentWaypoint = 0;
