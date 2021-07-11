@@ -18,12 +18,12 @@ public class EnemyInspect : MonoBehaviour
     int currentWaypoint = 0;
     public float nextWaypointDistance = 3f;
     bool reachedEndOfPath = false;
-    private Transform target;
+    public Transform target;
     #endregion
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("PlayerPosition").GetComponent<Transform>();
+        //target = GameObject.FindGameObjectWithTag("PlayerPosition").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
 
@@ -76,6 +76,7 @@ public class EnemyInspect : MonoBehaviour
         if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
+            
         }
     }
 }

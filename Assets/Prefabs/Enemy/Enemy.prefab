@@ -354,15 +354,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900d8a182dc706848a1d0bc282316ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTrigger: 0
   speed: 3
-  startWaitTime: 2
-  patrollingEnemy: 1
+  startWaitTime: 2.5
   patrolSpots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  spotLook: {fileID: 0}
+  nextWaypointDistance: 0.2
+  lookTarget: {fileID: 0}
 --- !u!114 &1607694709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +379,7 @@ MonoBehaviour:
   playerTrigger: 0
   speed: 4
   nextWaypointDistance: 0.1
+  target: {fileID: 0}
 --- !u!114 &8805831166342298312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  nextWaypointDistance: 1
+  nextWaypointDistance: 0.2
 --- !u!114 &8805831166342298310
 MonoBehaviour:
   m_ObjectHideFlags: 0
