@@ -206,6 +206,18 @@ TextureImporter:
   - first:
       213: 1869614742061580898
     second: Wall_27
+  - first:
+      213: -2604557967630011990
+    second: Wall_28
+  - first:
+      213: 7151425277879318950
+    second: Wall_29
+  - first:
+      213: -3163493415108640358
+    second: Wall_30
+  - first:
+      213: 3835656533130346023
+    second: Wall_31
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -888,6 +900,90 @@ TextureImporter:
       bones: []
       spriteID: 2620a67c3b432f910800000000000000
       internalID: 1869614742061580898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_28
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1ff76f350cadbd0800000000000000
+      internalID: -2604557967630011990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9febd7667fe3360800000000000000
+      internalID: 7151425277879318950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_30
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a918927ff730914d0800000000000000
+      internalID: -3163493415108640358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_31
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ef3a17b4dfa3530800000000000000
+      internalID: 3835656533130346023
       vertices: []
       indices: 
       edges: []

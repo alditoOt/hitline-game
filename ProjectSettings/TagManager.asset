@@ -9,6 +9,7 @@ TagManager:
   - EnemyBullet
   - PlayerPosition
   - Enemy
+  - OpeningWall
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - PlayerBullet
   - Enemy
   - Player
-  - 
+  - PlayerWall
   - 
   - 
   - 
