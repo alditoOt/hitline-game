@@ -10777,17 +10777,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2029317016, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6335240527987916098, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.241
-      objectReference: {fileID: 0}
-    - target: {fileID: 6335240527987916098, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.341
+    - target: {fileID: 6335240527987916101, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6335240528286495752, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
       propertyPath: playerPosition
@@ -10796,6 +10788,10 @@ PrefabInstance:
     - target: {fileID: 6335240528286495755, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335240528286495755, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6335240528286495765, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10845,6 +10841,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 6335240528568135734, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
 --- !u!1001 &8805831165425388190
@@ -10854,22 +10854,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1510141752942011927, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1510141752942011927, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
-      propertyPath: m_Offset.y
-      value: 4.4306703
-      objectReference: {fileID: 0}
-    - target: {fileID: 1510141752942011927, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
-      propertyPath: m_Size.y
-      value: 8.915643
-      objectReference: {fileID: 0}
-    - target: {fileID: 2132668469804804199, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
-      propertyPath: distance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8805831166342298306, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
       propertyPath: patrolSpots.Array.data[0]
       value: 

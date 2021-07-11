@@ -21,12 +21,9 @@ public class EnemyInspect : MonoBehaviour
     private Transform target;
     #endregion
 
-    private void Awake()
-    {
-        target = GameObject.FindGameObjectWithTag("PlayerPosition").GetComponent<Transform>();
-    }
     private void Start()
     {
+        target = GameObject.FindGameObjectWithTag("PlayerPosition").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
 
