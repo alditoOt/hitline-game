@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviourSingleton<GameManager>
 {
-    private static int enemyCount;
+    public int enemyCount;
     private GameObject openingWall;
     private void Start()
     {
@@ -19,5 +20,20 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             openingWall.SetActive(false);
             Debug.Log("OH MY GOD EVERYONE'S DEAD");
         }
+    }
+
+    public void NextFloor()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void GetEnemyCount(int enemyCount)
+    {
+        this.enemyCount = enemyCount;
+    }
+
+    public void GetOpeningWall(GameObject openingWall)
+    {
+        this.openingWall = openingWall;
     }
 }

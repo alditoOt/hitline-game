@@ -21,8 +21,8 @@ public class EnemyDead : MonoBehaviour
         if(collision.gameObject.CompareTag("PlayerBullet"))
         {
             anim.SetBool("Dead", true);
-            GameManager.Instance.EnemyDead();
             Destroy(collision.gameObject);
+            GameManager.Instance.EnemyDead();
             for(int i = 0; i < enemyCollider.Length; i ++)
             {
                 enemyCollider[i].enabled = false;

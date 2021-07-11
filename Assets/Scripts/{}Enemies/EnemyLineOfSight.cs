@@ -7,6 +7,7 @@ public class EnemyLineOfSight : MonoBehaviour
     public float distance;
     private Transform player;
     private Animator anim;
+    public LayerMask ignoreLayer;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class EnemyLineOfSight : MonoBehaviour
 
     void LineOfSight()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, player.position - transform.position, distance);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, (player.position - transform.position).normalized, distance, ~ignoreLayer);
         if(hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
