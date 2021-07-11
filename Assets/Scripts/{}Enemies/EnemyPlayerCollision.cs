@@ -7,9 +7,10 @@ public class EnemyPlayerCollision : MonoBehaviour
     private void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player").GetComponents<Collider2D>();
+        var enemy = gameObject.GetComponents<Collider2D>();
         for(int i = 0; i < player.Length; i ++)
         {
-            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), player[i], true);
+            Physics2D.IgnoreCollision(enemy[i], player[i], true);
         }
     }
 }

@@ -6,25 +6,28 @@ public class EnemyLineOfSight : MonoBehaviour
 {
     public float distance;
     private Transform player;
+    private Animator anim;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        anim = GetComponentInParent<Animator>();
     }
 
     void LineOfSight()
     {
-        RaycastHit2D hitInfo = Physics2D.Linecast(transform.position, player.position);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, player.position - transform.position, distance);
         if(hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
             if(hitInfo.collider.CompareTag("Player"))
             {
-                Debug.Log("te vi jaja");
+                anim.SetBool("InSight", true);
             }
             else
             {
-                Debug.Log("No te veo we");
+                StopCoroutine(SightTimer());
+                StartCoroutine(SightTimer());
             }
         }
         else
@@ -38,5 +41,20 @@ public class EnemyLineOfSight : MonoBehaviour
         {
             LineOfSight();
         }   
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            StopCoroutine(SightTimer());
+            StartCoroutine(SightTimer());
+        }
+    }
+
+    IEnumerator SightTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("InSight", false);
     }
 }
