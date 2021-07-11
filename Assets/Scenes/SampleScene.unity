@@ -10854,6 +10854,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1510141752942011927, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132668469804804199, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
+      propertyPath: distance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8805831166342298306, guid: 40735c57d440c4a458ab1c9a33bc97be, type: 3}
       propertyPath: patrolSpots.Array.data[0]
       value: 
