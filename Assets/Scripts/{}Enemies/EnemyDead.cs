@@ -7,6 +7,8 @@ public class EnemyDead : MonoBehaviour
     private Animator anim;
     private Collider2D[] enemyCollider;
     private Rigidbody2D rb;
+
+    public bool dead = false;
     private void Start()
     {
         enemyCollider = GetComponents<Collider2D>();
@@ -19,6 +21,7 @@ public class EnemyDead : MonoBehaviour
         if(collision.gameObject.CompareTag("PlayerBullet"))
         {
             anim.SetBool("Dead", true);
+            GameManager.Instance.EnemyDead();
             Destroy(collision.gameObject);
             for(int i = 0; i < enemyCollider.Length; i ++)
             {
