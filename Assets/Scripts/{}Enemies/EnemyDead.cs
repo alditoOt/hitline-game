@@ -8,6 +8,8 @@ public class EnemyDead : MonoBehaviour
     private Collider2D[] enemyCollider;
     private Rigidbody2D rb;
 
+    public int hp = 1;
+
     public bool dead = false;
     private void Start()
     {
@@ -20,14 +22,21 @@ public class EnemyDead : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("PlayerBullet"))
         {
-            anim.SetBool("Dead", true);
+            hp--;
             Destroy(collision.gameObject);
-            GameManager.Instance.EnemyDead();
-            for(int i = 0; i < enemyCollider.Length; i ++)
+            if(hp <= 0)
             {
-                enemyCollider[i].enabled = false;
+                if(!anim.GetBool("Dead"))
+                {
+                    GameManager.Instance.EnemyDead();
+                    anim.SetBool("Dead", true);
+                }
+                for(int i = 0; i < enemyCollider.Length; i ++)
+                {
+                    enemyCollider[i].enabled = false;
+                }
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
             }
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 }
