@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         if(enemyCount <= 0 && SceneManager.GetActiveScene().buildIndex != finalFloorIndex)
         {
             openingWall.SetActive(false);
+            AudioManager.Instance.Play("DoorOpen");
+            AudioManager.Instance.Play("AllDead");
             Debug.Log("OH MY GOD EVERYONE'S DEAD");
         }
         else if(enemyCount <= 0 && SceneManager.GetActiveScene().buildIndex == finalFloorIndex)
@@ -42,13 +44,16 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         screenTransitionStart.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
     public void RestartFloor()
     {
         screenTransitionRestart.SetActive(true);
         finalFloorIndex = 9;
     }
 
+    public void BackToMenu()
+    {
+        screenTransitionStart.SetActive(true);
+    }
     public void GetEnemyCount(int enemyCount)
     {
         this.enemyCount = enemyCount;
@@ -68,5 +73,10 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         this.screenTransitionStart = screenTransitionStart;
         this.screenTransitionRestart = screenTransitionRestart;
+    }
+
+    public void PlayShootAudio()
+    {
+        AudioManager.Instance.Play("Shoot");
     }
 }

@@ -8,7 +8,14 @@ public class SceneChanger : MonoBehaviour
 {
     public void NextFloor()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     public void RestartFloor()
@@ -33,5 +40,15 @@ public class SceneChanger : MonoBehaviour
     public void EnablePlayerInput()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>().enabled = true;
+    }
+
+    public void StartTimer()
+    {
+        TimerManager.Instance.BeginTimer();
+    }
+
+    public void EndTimer()
+    {
+        TimerManager.Instance.EndTimer();
     }
 }

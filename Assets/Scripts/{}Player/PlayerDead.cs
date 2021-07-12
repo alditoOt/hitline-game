@@ -21,6 +21,7 @@ public class PlayerDead : MonoBehaviour
         if(collision.CompareTag("EnemyBullet"))
         {
             dead = true;
+            AudioManager.Instance.Play("Hurt");
             anim.SetBool("Dead", true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             movementScript.moveSpeed = 0;

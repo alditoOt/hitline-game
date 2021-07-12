@@ -16,6 +16,7 @@ public class PlayerRestart : MonoBehaviour
         if(deadScript.dead)
         {
             GameManager.Instance.RestartFloor();
+            AudioManager.Instance.Play("Restart");
         }
     }
 }

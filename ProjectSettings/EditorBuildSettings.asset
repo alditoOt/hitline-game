@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor9.unity
     guid: da2c95adf2ddf774b83a8e8be2222683
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 3b876825ef241154baf07eceeea80553
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e6051330a5e94cd458f52727a24dceb8, type: 2}

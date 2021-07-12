@@ -37,6 +37,7 @@ public class Shooting : MonoBehaviour
     {
         if(ammo > 0)
         {
+            AudioManager.Instance.Play("Shoot");
             GameObject bullet = Instantiate(this.bullet, firePoint.position, firePoint.rotation);
             ammo--;
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
