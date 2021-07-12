@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public void RestartFloor()
     {
         screenTransitionRestart.SetActive(true);
+        finalFloorIndex = 9;
     }
 
     public void GetEnemyCount(int enemyCount)
