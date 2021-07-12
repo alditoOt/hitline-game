@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     private GameObject openingWall;
     private GameObject boss;
     public int finalFloorIndex;
+
+    public GameObject screenTransitionStart;
     private void Start()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
@@ -29,9 +31,15 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         }
     }
 
+    public void StartGame()
+    {
+        screenTransitionStart.SetActive(true);
+        //SceneManager.LoadScene(1);
+    }
     public void NextFloor()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        screenTransitionStart.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void RestartFloor()
@@ -52,5 +60,10 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public void GetBoss(GameObject boss)
     {
         this.boss = boss;
+    }
+
+    public void GetScreenTransitionStart(GameObject screenTransitionStart)
+    {
+        this.screenTransitionStart = screenTransitionStart;
     }
 }
