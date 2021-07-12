@@ -633,7 +633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.9882345, y: -9, z: -10}
+  m_LocalPosition: {x: -12.99, y: -9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -671,6 +671,11 @@ Transform:
   m_Father: {fileID: 1415542459}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &595133344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 595133344, guid: fc19a1046dc24af40a513ba253daaf15, type: 3}
+  m_PrefabInstance: {fileID: 675401089}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &675401089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -762,17 +767,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6603669295240345753, guid: fc19a1046dc24af40a513ba253daaf15, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6603669295240345828, guid: fc19a1046dc24af40a513ba253daaf15, type: 3}
       propertyPath: m_Name
       value: AmmoCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6603669295240345828, guid: fc19a1046dc24af40a513ba253daaf15, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc19a1046dc24af40a513ba253daaf15, type: 3}
@@ -11820,6 +11817,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1808838628, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 595133344}
     - target: {fileID: 6335240528286495752, guid: 1b86acc699b94d44b8253528f4b1632c, type: 3}
       propertyPath: playerPosition
       value: 

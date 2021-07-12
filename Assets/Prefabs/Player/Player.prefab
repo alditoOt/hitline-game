@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead: 0
+  text: {fileID: 0}
 --- !u!114 &837993100
 MonoBehaviour:
   m_ObjectHideFlags: 0
