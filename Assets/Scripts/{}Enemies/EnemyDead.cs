@@ -7,6 +7,7 @@ public class EnemyDead : MonoBehaviour
     private Animator anim;
     private Collider2D[] enemyCollider;
     private Rigidbody2D rb;
+    private Shooting shootScript;
 
     public int hp = 1;
 
@@ -16,6 +17,7 @@ public class EnemyDead : MonoBehaviour
         enemyCollider = GetComponents<Collider2D>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        shootScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +31,10 @@ public class EnemyDead : MonoBehaviour
                 if(!anim.GetBool("Dead"))
                 {
                     GameManager.Instance.EnemyDead();
+                    shootScript.ammo = shootScript.maxAmmo;
                     anim.SetBool("Dead", true);
+                    var circleSprite = transform.GetChild(4);
+                    circleSprite.gameObject.SetActive(false);
                 }
                 for(int i = 0; i < enemyCollider.Length; i ++)
                 {

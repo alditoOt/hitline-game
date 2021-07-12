@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 6335240527987916098}
   bullet: {fileID: 3760855507716058446, guid: e133c184ba51bbd4db9f6e6229c018f4, type: 3}
-  bulletForce: 20
+  bulletForce: 25
   playerPosition: {fileID: 0}
 --- !u!95 &6335240528286495762
 Animator:
