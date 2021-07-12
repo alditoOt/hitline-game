@@ -235,7 +235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 199
   m_Sprite: {fileID: 21300000, guid: 91e7433f6cd439948839248613a48449, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
   firePoint: {fileID: 8319932872191243901}
   bullet: {fileID: 3760855507716058446, guid: 4f36b46c906dcac4a9a791f2a0761b3e, type: 3}
   bulletForce: 20
-  startingFireRate: 2.5
+  startingFireRate: 1.5
 --- !u!114 &8319932871853823878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,7 +618,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 101
+  m_SortingOrder: 200
   m_Sprite: {fileID: -1182821291677670348, guid: 90e3a2d7511216e4e9f0d77fe18dd505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

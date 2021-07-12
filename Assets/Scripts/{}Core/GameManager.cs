@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     private GameObject openingWall;
     private GameObject boss;
     private GameObject screenTransitionStart;
-    private GameObject screenTransitionRestart;
     
     public int finalFloorIndex;
 
@@ -63,7 +62,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     }
     IEnumerator ScreenStartTimer(int screen)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.1f);
         SceneManager.LoadScene(screen);
     }
     #endregion
@@ -84,10 +83,10 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         this.boss = boss;
     }
 
-    public void GetScreenTransitions(GameObject screenTransitionStart, GameObject screenTransitionRestart)
+    public void GetScreenTransitions(GameObject screenTransitionStart)
     {
         this.screenTransitionStart = screenTransitionStart;
-        this.screenTransitionRestart = screenTransitionRestart;
+       
     }
     #endregion
     public void PlayShootAudio()

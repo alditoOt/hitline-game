@@ -11,10 +11,9 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     private float elapsedTime;
     private float timePlaying;
 
-    private string minutes, seconds;
+    public static string minutes, seconds;
     private void Start()
     {
-        timerText.text = "00:00:00";
         timerGoing = false;
     }
 
@@ -22,9 +21,9 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     {
         if(timerGoing)
         {
-            float t = Time.time - startTime;
-            minutes = ((int)t / 60).ToString("00");
-            seconds = (t % 60).ToString("00");
+            elapsedTime += Time.deltaTime;
+            minutes = ((int)elapsedTime / 60).ToString("00");
+            seconds = ((int)elapsedTime % 60).ToString("00");
             Debug.Log(minutes + ":" + seconds);
         }
     }
@@ -32,7 +31,6 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     {
         timerGoing = true;
         elapsedTime = 0f;
-        startTime = Time.time;
 
         //StartCoroutine(UpdateTimer());
     }
@@ -40,7 +38,7 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     public void EndTimer()
     {
         timerGoing = false;
-        timerText.text = "Time: " + minutes + ":" + seconds;
+        //timerText.text = "Time: " + minutes + ":" + seconds;
     }
 
     /*IEnumerator UpdateTimer()

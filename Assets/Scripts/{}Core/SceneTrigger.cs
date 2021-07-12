@@ -9,6 +9,7 @@ public class SceneTrigger : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             GameManager.Instance.NextFloor();
+            Destroy(this.gameObject);
         }
     }
 }

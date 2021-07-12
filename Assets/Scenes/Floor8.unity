@@ -2164,7 +2164,7 @@ PrefabInstance:
     - target: {fileID: 8805831166342298306, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: patrolSpots.Array.data[0]
       value: 
-      objectReference: {fileID: 1277923470}
+      objectReference: {fileID: 1883570329}
     - target: {fileID: 8805831166342298306, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: lookTarget
       value: 
@@ -2172,15 +2172,15 @@ PrefabInstance:
     - target: {fileID: 8805831166342298306, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: patrolSpots.Array.data[1]
       value: 
-      objectReference: {fileID: 1226943089}
+      objectReference: {fileID: 1605612078}
     - target: {fileID: 8805831166342298306, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: patrolSpots.Array.data[2]
       value: 
-      objectReference: {fileID: 1883570329}
+      objectReference: {fileID: 1277923470}
     - target: {fileID: 8805831166342298306, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: patrolSpots.Array.data[3]
       value: 
-      objectReference: {fileID: 1605612078}
+      objectReference: {fileID: 1226943089}
     - target: {fileID: 8805831166342298306, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: patrolSpots.Array.data[4]
       value: 
@@ -2199,7 +2199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8805831166342298311, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.11
+      value: -7.11
       objectReference: {fileID: 0}
     - target: {fileID: 8805831166342298311, guid: 2a0d0f28e390ca6409ecc000649017a1, type: 3}
       propertyPath: m_LocalPosition.y
