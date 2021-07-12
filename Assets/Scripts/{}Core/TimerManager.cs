@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
-
 public class TimerManager : MonoBehaviourSingleton<TimerManager>
 {
     public TextMeshProUGUI timerText;
 
-    private TimeSpan timePlaying;
     private bool timerGoing;
-
+    private float startTime;
     private float elapsedTime;
+    private float timePlaying;
 
+    private string minutes, seconds;
     private void Start()
     {
         timerText.text = "00:00:00";
@@ -23,14 +22,17 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     {
         if(timerGoing)
         {
-            elapsedTime += Time.deltaTime;
-            timePlaying = TimeSpan.FromSeconds(elapsedTime);
+            float t = Time.time - startTime;
+            minutes = ((int)t / 60).ToString("00");
+            seconds = (t % 60).ToString("00");
+            Debug.Log(minutes + ":" + seconds);
         }
     }
     public void BeginTimer()
     {
         timerGoing = true;
         elapsedTime = 0f;
+        startTime = Time.time;
 
         //StartCoroutine(UpdateTimer());
     }
@@ -38,18 +40,21 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     public void EndTimer()
     {
         timerGoing = false;
-        timerText.text = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
+        timerText.text = "Time: " + minutes + ":" + seconds;
     }
 
-    IEnumerator UpdateTimer()
+    /*IEnumerator UpdateTimer()
     {
-        if(timerGoing)
+        while(timerGoing)
         {
-            elapsedTime += Time.deltaTime;
-            timePlaying = TimeSpan.FromSeconds(elapsedTime);
+            yield return new WaitForSecondsRealtime(0.001f);
+            elapsedTime += 0.001f;
+            minutes = (int)elapsedTime / 60000;
+            seconds = (int)elapsedTime / 1000 - 60 * minutes;
+            milliseconds = (int)elapsedTime - minutes * 60000 - 1000 * seconds;
+            Debug.Log(minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + milliseconds.ToString("00"));
         }
-        yield return null;
-    }
+    }*/
 
     public void GetText(TextMeshProUGUI text)
     {

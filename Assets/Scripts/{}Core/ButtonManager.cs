@@ -18,4 +18,9 @@ public class ButtonManager : MonoBehaviour
     {
         GameManager.Instance.QuitGame();
     }
+
+    public void StartTimer()
+    {
+        TimerManager.Instance.BeginTimer();
+    }
 }
