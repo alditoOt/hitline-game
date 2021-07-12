@@ -8,10 +8,19 @@ public class Shooting : MonoBehaviour
     public GameObject bullet;
     public float bulletForce = 20f;
     public Transform playerPosition;
+    private PlayerDead deadScript;
+
+    private void Start()
+    {
+        deadScript = GetComponent<PlayerDead>();
+    }
 
     void OnShoot()
     {
-        Shoot();
+        if(!deadScript.dead)
+        {
+            Shoot();
+        }
     }
 
     void Shoot()

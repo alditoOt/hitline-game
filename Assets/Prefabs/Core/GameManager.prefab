@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCount: 0
-  finalFloorIndex: 8
+  finalFloorIndex: 9
+  screenTransitionStart: {fileID: 0}

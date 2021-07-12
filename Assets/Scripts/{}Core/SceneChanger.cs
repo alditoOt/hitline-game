@@ -11,6 +11,11 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void RestartFloor()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void DisableScreen()
     {
         this.gameObject.SetActive(false);
@@ -18,7 +23,11 @@ public class SceneChanger : MonoBehaviour
 
     public void DisablePlayerInput()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>().enabled = false;
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if(player != null)
+        {
+            player.GetComponent<PlayerInput>().enabled = false;
+        }
     }
 
     public void EnablePlayerInput()

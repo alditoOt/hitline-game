@@ -16,19 +16,24 @@ public class PlayerMovement : MonoBehaviour
     #region components
     private Rigidbody2D rb;
     private Animator anim;
+    private PlayerDead deadScript;
     #endregion
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        deadScript = GetComponent<PlayerDead>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        DoMove();
-        LookToMouse();
+        if(!deadScript.dead)
+        {
+            DoMove();
+            LookToMouse();
+        }
     }
 
     #region movement

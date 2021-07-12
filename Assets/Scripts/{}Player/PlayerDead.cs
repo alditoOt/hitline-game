@@ -5,13 +5,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerDead : MonoBehaviour
 {
-    public PlayerInput playerInput;
+    private PlayerMovement movementScript;
+    public bool dead = false;
+
+    private void Start()
+    {
+        movementScript = GetComponent<PlayerMovement>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("EnemyBullet"))
         {
-            Debug.Log("I died, thank you forever");
-            playerInput.enabled = false;
+            dead = true;
+            movementScript.moveSpeed = 0;
+            movementScript.mousePosition = new Vector2(0f, 0f);
             Destroy(collision.gameObject);
         }
     }

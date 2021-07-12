@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public int finalFloorIndex;
 
     public GameObject screenTransitionStart;
+    public GameObject screenTransitionRestart;
     private void Start()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
 
     public void RestartFloor()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        screenTransitionRestart.SetActive(true);
     }
 
     public void GetEnemyCount(int enemyCount)
@@ -62,8 +63,9 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         this.boss = boss;
     }
 
-    public void GetScreenTransitionStart(GameObject screenTransitionStart)
+    public void GetScreenTransitions(GameObject screenTransitionStart, GameObject screenTransitionRestart)
     {
         this.screenTransitionStart = screenTransitionStart;
+        this.screenTransitionRestart = screenTransitionRestart;
     }
 }
