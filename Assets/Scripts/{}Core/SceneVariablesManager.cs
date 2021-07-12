@@ -23,4 +23,21 @@ public class SceneVariablesManager : MonoBehaviour
         screenTransitionStart.gameObject.SetActive(true);
         AudioManager.Instance.Play("Shoot");
     }
+
+    public void StartGame()
+    {
+        screenTransitionStart.gameObject.SetActive(true);
+        AudioManager.Instance.Play("Shoot");
+    }
+
+    public void QuitGame()
+    {
+        AudioManager.Instance.Play("Shoot");
+        Application.Quit();
+    }
+
+    public void BeginTimer()
+    {
+        TimerManager.Instance.BeginTimer();
+    }
 }

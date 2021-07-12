@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviourSingleton<GameManager>
 {
-    public int enemyCount;
+    private int enemyCount;
     private GameObject openingWall;
     private GameObject boss;
+    private GameObject screenTransitionStart;
+    private GameObject screenTransitionRestart;
+    
     public int finalFloorIndex;
 
-    public GameObject screenTransitionStart;
-    public GameObject screenTransitionRestart;
     private void Start()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        openingWall = GameObject.FindGameObjectWithTag("OpeningWall");
+        AudioManager.Instance.Play("Music");
     }
     public void EnemyDead()
     {
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         {
             openingWall.SetActive(false);
             AudioManager.Instance.Play("DoorOpen");
-            AudioManager.Instance.Play("AllDead");
+            //AudioManager.Instance.Play("AllDead");
             Debug.Log("OH MY GOD EVERYONE'S DEAD");
         }
         else if(enemyCount <= 0 && SceneManager.GetActiveScene().buildIndex == finalFloorIndex)
@@ -33,27 +33,42 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
             finalFloorIndex = 0;
         }
     }
-
+    #region Buttons
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     public void StartGame()
     {
         screenTransitionStart.SetActive(true);
-        //SceneManager.LoadScene(1);
+        StartCoroutine(ScreenStartTimer(1));
     }
-    public void NextFloor()
-    {
-        screenTransitionStart.SetActive(true);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-    public void RestartFloor()
-    {
-        screenTransitionRestart.SetActive(true);
-        finalFloorIndex = 9;
-    }
-
     public void BackToMenu()
     {
         screenTransitionStart.SetActive(true);
+        StartCoroutine(ScreenStartTimer(0));
     }
+    #endregion
+    #region LevelManagement
+    public void NextFloor()
+    {
+        screenTransitionStart.SetActive(true);
+        StartCoroutine(ScreenStartTimer(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+    public void RestartFloor()
+    {
+        screenTransitionStart.SetActive(true);
+        StartCoroutine(ScreenStartTimer(SceneManager.GetActiveScene().buildIndex));
+        finalFloorIndex = 9;
+    }
+    IEnumerator ScreenStartTimer(int screen)
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(screen);
+    }
+    #endregion
+
+    #region getComponents
     public void GetEnemyCount(int enemyCount)
     {
         this.enemyCount = enemyCount;
@@ -74,7 +89,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         this.screenTransitionStart = screenTransitionStart;
         this.screenTransitionRestart = screenTransitionRestart;
     }
-
+    #endregion
     public void PlayShootAudio()
     {
         AudioManager.Instance.Play("Shoot");
