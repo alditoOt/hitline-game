@@ -14,7 +14,10 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     private void Start()
     {
         timerGoing = false;
-        DontDestroyOnLoad(speedrunTimer);
+        if(speedrunTimer != null)
+        {
+            DontDestroyOnLoad(speedrunTimer);
+        }
     }
 
     private void FixedUpdate()

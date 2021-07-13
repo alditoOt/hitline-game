@@ -7,12 +7,11 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bullet;
-    public GameObject crosshairPrefab;
-    public GameObject crosshair;
+    public Transform crosshair;
     public float bulletForce = 20f;
     public Transform playerPosition;
     private PlayerDead deadScript;
-
+    public float maxDistance;
     public float distance;
     public int ammo;
     public int maxAmmo = 6;
@@ -21,7 +20,8 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         deadScript = GetComponent<PlayerDead>();
-        //crosshair = Instantiate(this.crosshairPrefab, firePoint.position, firePoint.rotation);
+        //crosshairPrefab = Instantiate(this.crosshairPrefab, firePoint.position, firePoint.rotation);
+        crosshair.parent = transform.parent;
         ammo = maxAmmo;
     }
 
@@ -40,13 +40,10 @@ public class Shooting : MonoBehaviour
 
     void MoveCrosshair()
     {
-        /*distance = Vector2.Distance(PlayerMovement.mousePosition, firePoint.position);
-        if(distance >= 5)
-        {
-            distance = 5;
-        }*/
-        Debug.DrawLine(transform.position, PlayerMovement.mousePosition, Color.red);
-        crosshair.GetComponent<Transform>().position = PlayerMovement.mousePosition;
+        distance = Mathf.Min(Vector2.Distance(PlayerMovement.mousePosition, firePoint.position), maxDistance);
+        var direction = (PlayerMovement.mousePosition - new Vector2(firePoint.position.x, firePoint.position.y)).normalized;
+        //Debug.DrawLine(transform.position, PlayerMovement.mousePosition, Color.red);
+        crosshair.position = direction * distance + new Vector2(firePoint.position.x, firePoint.position.y);
     }
 
     void Shoot()

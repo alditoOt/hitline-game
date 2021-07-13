@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
         StartCoroutine(ScreenStartTimer(1));
+        finalFloorIndex = 9;
     }
     public void BackToMenu()
     {

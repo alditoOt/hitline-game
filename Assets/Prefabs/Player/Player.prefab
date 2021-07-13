@@ -227,10 +227,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 6335240527987916098}
   bullet: {fileID: 3760855507716058446, guid: e133c184ba51bbd4db9f6e6229c018f4, type: 3}
-  crosshairPrefab: {fileID: 5993772448585064873}
-  crosshair: {fileID: 5993772448585064873}
+  crosshair: {fileID: 2602003200035886434}
   bulletForce: 25
   playerPosition: {fileID: 0}
+  maxDistance: 3
   distance: 1
   ammo: 0
   maxAmmo: 9
@@ -465,21 +465,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1607076264952884558, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607076264952884558, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607076264952884558, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7025473650140928389, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}
       propertyPath: m_Name
       value: Crosshair
       objectReference: {fileID: 0}
     - target: {fileID: 7025473650140928389, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}
---- !u!1 &5993772448585064873 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7025473650140928389, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}
-  m_PrefabInstance: {fileID: 3625775137228060716}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2602003200035886434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1607076264952884558, guid: 8e4f51545b001064f95ab2573342bcce, type: 3}

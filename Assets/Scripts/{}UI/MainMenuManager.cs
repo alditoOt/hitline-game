@@ -8,6 +8,7 @@ public class MainMenuManager : MonoBehaviour
     public GameObject settingsMenu;
     public void ShowSettingsMenu()
     {
+        AudioManager.Instance.Play("Shoot");
         settingsMenu.GetComponent<Animator>().SetBool("Show", true);
         settingsMenu.GetComponent<Animator>().SetBool("Hide", false);
         //StartCoroutine(ScreenTimer());
@@ -15,6 +16,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void HideSettingsMenu()
     {
+        AudioManager.Instance.Play("Shoot");
         settingsMenu.GetComponent<Animator>().SetBool("Show", false);
         settingsMenu.GetComponent<Animator>().SetBool("Hide", true);
     }

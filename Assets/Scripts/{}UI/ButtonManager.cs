@@ -32,11 +32,13 @@ public class ButtonManager : MonoBehaviour
     }
     public void SetBlood()
     {
+        AudioManager.Instance.Play("Shoot");
         VariablesManager.Instance.bloodToggle = !VariablesManager.Instance.bloodToggle;
     }
 
     public void SetSpeedrunTimer()
     {
+        AudioManager.Instance.Play("Shoot");
         VariablesManager.Instance.speedrunTimer = !VariablesManager.Instance.speedrunTimer;
     }
 
