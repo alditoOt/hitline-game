@@ -42,6 +42,10 @@ public class ButtonManager : MonoBehaviour
 
     public void UpdateButtonText()
     {
+        if(speedrunTimerText == null || bloodText == null)
+        {
+            return;
+        }
         if(VariablesManager.Instance.speedrunTimer)
         {
             speedrunTimerText.text = "Speedrun timer: yes";

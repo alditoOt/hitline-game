@@ -9,6 +9,13 @@ public class TimerEnd : MonoBehaviour
     private void Start()
     {
         TimerManager.Instance.EndTimer();
-        timer.text = "Time: " + TimerManager.minutes + ":" + TimerManager.seconds + "." + TimerManager.milliseconds;
+        if(VariablesManager.Instance.speedrunTimer)
+        {
+            timer.text = "You finished the job in\nTime: " + TimerManager.minutes + ":" + TimerManager.seconds + "." + TimerManager.milliseconds;
+        }
+        else
+        {
+            timer.text = "We'll let you know when we need you again";
+        }
     }
 }

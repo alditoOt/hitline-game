@@ -5,7 +5,6 @@ using TMPro;
 public class TimerManager : MonoBehaviourSingleton<TimerManager>
 {
     public TextMeshProUGUI timerText;
-
     public GameObject speedrunTimer;
 
     private bool timerGoing;
