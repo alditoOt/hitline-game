@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6732488038119964106}
   - component: {fileID: 4203427646327608765}
   - component: {fileID: -609343558522643617}
+  - component: {fileID: 1028931057}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,10 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8bcbe6aed18f5547b7335427fd4eb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 0
   finalFloorIndex: 9
-  screenTransitionStart: {fileID: 0}
-  screenTransitionRestart: {fileID: 0}
 --- !u!114 &-609343558522643617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,3 +59,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 0}
+  speedrunTimer: {fileID: 0}
+--- !u!114 &1028931057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945611999569172384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5523267674963f1478ee4a33407b34b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedrunTimer: 0
+  bloodToggle: 0

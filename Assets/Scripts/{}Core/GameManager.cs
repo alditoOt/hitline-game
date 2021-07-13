@@ -35,19 +35,23 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     #region Buttons
     public void QuitGame()
     {
+        AudioManager.Instance.Play("Shoot");
         Application.Quit();
     }
     public void StartGame()
     {
+        AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
         StartCoroutine(ScreenStartTimer(1));
     }
     public void BackToMenu()
     {
+        AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
         StartCoroutine(ScreenStartTimer(0));
     }
     #endregion
+
     #region LevelManagement
     public void NextFloor()
     {

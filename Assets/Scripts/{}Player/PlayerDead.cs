@@ -28,7 +28,6 @@ public class PlayerDead : MonoBehaviour
             text.SetActive(true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             movementScript.moveSpeed = 0;
-            movementScript.mousePosition = new Vector2(0f, 0f);
             Destroy(collision.gameObject);
         }
     }

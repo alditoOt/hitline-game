@@ -44,12 +44,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: shoot
+  - name: Shoot
     clip: {fileID: 8300000, guid: 411c447dbe38091409a656dc3ae8fcfc, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     pitchMinRange: 1
     pitchMaxRange: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: 4409d2baf09ea124a922de38344233cc, type: 3}
+    volume: 1
+    pitch: 1
+    pitchMinRange: 1
+    pitchMaxRange: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Restart
+    clip: {fileID: 8300000, guid: 5c2d8dad20ff06448aee5648ae1691ec, type: 3}
+    volume: 1
+    pitch: 1
+    pitchMinRange: 1
+    pitchMaxRange: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DoorOpen
+    clip: {fileID: 8300000, guid: c756e80e728197f4bba6994fc6c6a88e, type: 3}
+    volume: 1
+    pitch: 1
+    pitchMinRange: 1
+    pitchMaxRange: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AllDead
+    clip: {fileID: 8300000, guid: 07bb27fcf2d0c714da799be4d8ca88e3, type: 3}
+    volume: 0.8
+    pitch: 1
+    pitchMinRange: 1
+    pitchMaxRange: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Music
+    clip: {fileID: 8300000, guid: 1f17b049abd2b144d80530c0eba177ad, type: 3}
+    volume: 0.7
+    pitch: 1
+    pitchMinRange: 1
+    pitchMaxRange: 1
+    loop: 1
     source: {fileID: 0}
   lowVolume: 0.1

@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f516ee66e22c0484b8c3c167bce470e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedrunTimerText: {fileID: 0}
+  bloodText: {fileID: 0}

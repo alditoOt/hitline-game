@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  nextWaypointDistance: 0.2
+  nextWaypointDistance: 0.7
 --- !u!114 &8805831166342298310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   firePoint: {fileID: 8805831165339097918}
   bullet: {fileID: 3760855507716058446, guid: 4f36b46c906dcac4a9a791f2a0761b3e, type: 3}
   bulletForce: 20
-  startingFireRate: 1
+  startingFireRate: 0.5
 --- !u!114 &8805831166342298309
 MonoBehaviour:
   m_ObjectHideFlags: 0

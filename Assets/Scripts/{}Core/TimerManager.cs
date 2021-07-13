@@ -6,15 +6,16 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
 {
     public TextMeshProUGUI timerText;
 
-    private bool timerGoing;
-    private float startTime;
-    private float elapsedTime;
-    private float timePlaying;
+    public GameObject speedrunTimer;
 
-    public static string minutes, seconds;
+    private bool timerGoing;
+    private float elapsedTime;
+
+    public static string minutes, seconds, milliseconds;
     private void Start()
     {
         timerGoing = false;
+        DontDestroyOnLoad(speedrunTimer);
     }
 
     private void FixedUpdate()
@@ -24,38 +25,37 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
             elapsedTime += Time.deltaTime;
             minutes = ((int)elapsedTime / 60).ToString("00");
             seconds = ((int)elapsedTime % 60).ToString("00");
-            Debug.Log(minutes + ":" + seconds);
+            milliseconds = ((int)((elapsedTime - Mathf.Floor(elapsedTime))*1000)).ToString("00");
+            Debug.Log(minutes + ":" + seconds + "." + milliseconds);
+            timerText.text = minutes + ":" + seconds + "." + milliseconds;
         }
     }
     public void BeginTimer()
     {
         timerGoing = true;
         elapsedTime = 0f;
-
-        //StartCoroutine(UpdateTimer());
+        if(VariablesManager.Instance.speedrunTimer)
+        {
+            speedrunTimer.SetActive(true);
+        }
+        else
+        {
+            speedrunTimer.SetActive(false);
+        }
     }
 
     public void EndTimer()
     {
         timerGoing = false;
-        //timerText.text = "Time: " + minutes + ":" + seconds;
     }
 
-    /*IEnumerator UpdateTimer()
+    public void DisableSpeedrunTimer()
     {
-        while(timerGoing)
-        {
-            yield return new WaitForSecondsRealtime(0.001f);
-            elapsedTime += 0.001f;
-            minutes = (int)elapsedTime / 60000;
-            seconds = (int)elapsedTime / 1000 - 60 * minutes;
-            milliseconds = (int)elapsedTime - minutes * 60000 - 1000 * seconds;
-            Debug.Log(minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + milliseconds.ToString("00"));
-        }
-    }*/
+        speedrunTimer.SetActive(false);
+    }
 
-    public void GetText(TextMeshProUGUI text)
+    public void EnableSpeedrunTimer()
     {
-        timerText = text;
+        speedrunTimer.SetActive(true);
     }
 }

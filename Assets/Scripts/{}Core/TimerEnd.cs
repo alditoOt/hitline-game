@@ -9,6 +9,6 @@ public class TimerEnd : MonoBehaviour
     private void Start()
     {
         TimerManager.Instance.EndTimer();
-        timer.text = "Time: " + TimerManager.minutes + ":" + TimerManager.seconds;
+        timer.text = "Time: " + TimerManager.minutes + ":" + TimerManager.seconds + "." + TimerManager.milliseconds;
     }
 }

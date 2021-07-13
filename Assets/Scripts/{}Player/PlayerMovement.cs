@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     #endregion
 
-    public Vector2 mousePosition;
+    public static Vector2 mousePosition;
     public Camera cam;
 
     #region components
