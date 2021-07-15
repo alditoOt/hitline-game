@@ -745,6 +745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 0}
   screenTransitionStart: {fileID: 754393266}
+  pauseMenu: {fileID: 5630365591450334369, guid: 017f4d8b5eedf1b4ca1e2f5328e5ceac, type: 3}
 --- !u!4 &417487318
 Transform:
   m_ObjectHideFlags: 0
@@ -871,7 +872,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: -9, z: -10}
+  m_LocalPosition: {x: -12.985559, y: -9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

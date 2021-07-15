@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     private GameObject openingWall;
     private GameObject boss;
     private GameObject screenTransitionStart;
-    
-    public int finalFloorIndex;
 
     private void Start()
     {
@@ -19,17 +17,18 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public void EnemyDead()
     {
         enemyCount--;
-        if(enemyCount <= 0 && SceneManager.GetActiveScene().buildIndex != finalFloorIndex)
+        if(boss != null)
+        {
+            if(enemyCount == 1)
+            {
+                boss.SetActive(true);
+            }
+        }
+        if (enemyCount <= 0)
         {
             openingWall.SetActive(false);
             AudioManager.Instance.Play("DoorOpen");
-            //AudioManager.Instance.Play("AllDead");
             Debug.Log("OH MY GOD EVERYONE'S DEAD");
-        }
-        else if(enemyCount <= 0 && SceneManager.GetActiveScene().buildIndex == finalFloorIndex)
-        {
-            boss.SetActive(true);
-            finalFloorIndex = 0;
         }
     }
     #region Buttons
@@ -43,7 +42,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
         StartCoroutine(ScreenStartTimer(1));
-        finalFloorIndex = 9;
     }
     public void BackToMenu()
     {
@@ -63,7 +61,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         screenTransitionStart.SetActive(true);
         StartCoroutine(ScreenStartTimer(SceneManager.GetActiveScene().buildIndex));
-        finalFloorIndex = 9;
     }
     IEnumerator ScreenStartTimer(int screen)
     {

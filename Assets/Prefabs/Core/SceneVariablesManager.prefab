@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 0}
   screenTransitionStart: {fileID: 0}
+  pauseMenu: {fileID: 0}
