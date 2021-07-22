@@ -63,8 +63,7 @@ public class ButtonManager : MonoBehaviour
         else
         {
             bloodText.text = "Show blood: no";
-        }
-    }
+        }    }
 
     public void DisableSpeedrunTimer()
     {

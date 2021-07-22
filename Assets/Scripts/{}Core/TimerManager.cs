@@ -24,7 +24,7 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
     {
         if(timerGoing)
         {
-            elapsedTime += Time.unscaledDeltaTime;
+            elapsedTime += Time.deltaTime;
             minutes = ((int)elapsedTime / 60).ToString("00");
             seconds = ((int)elapsedTime % 60).ToString("00");
             milliseconds = ((int)((elapsedTime - Mathf.Floor(elapsedTime))*1000)).ToString("00");
