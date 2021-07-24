@@ -17,6 +17,7 @@ public class AmmoPickup : MonoBehaviour
         {
             shootScript.ammo = shootScript.maxAmmo;
             Destroy(this.gameObject);
+            AudioManager.Instance.Play("enemyDead");
         }
     }
 }

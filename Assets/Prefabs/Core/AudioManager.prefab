@@ -62,7 +62,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Restart
     clip: {fileID: 8300000, guid: 5c2d8dad20ff06448aee5648ae1691ec, type: 3}
-    volume: 1
+    volume: 2
     pitch: 1
     pitchMinRange: 1
     pitchMaxRange: 1
@@ -83,6 +83,14 @@ MonoBehaviour:
     pitchMinRange: 1
     pitchMaxRange: 1
     loop: 0
+    source: {fileID: 0}
+  - name: enemyDead
+    clip: {fileID: 8300000, guid: 646ba444a751e1141aee7312af65285d, type: 3}
+    volume: 0.7
+    pitch: 1
+    pitchMinRange: 1
+    pitchMaxRange: 1
+    loop: 1
     source: {fileID: 0}
   - name: Music
     clip: {fileID: 8300000, guid: 1f17b049abd2b144d80530c0eba177ad, type: 3}

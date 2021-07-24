@@ -32,6 +32,7 @@ public class EnemyDead : MonoBehaviour
                 {
                     GameManager.Instance.EnemyDead();
                     shootScript.ammo = shootScript.maxAmmo;
+                    AudioManager.Instance.Play("enemyDead");
                     anim.SetBool("Dead", true);
                     var circleSprite = transform.GetChild(4);
                     circleSprite.gameObject.SetActive(false);

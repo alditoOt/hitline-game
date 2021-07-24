@@ -560,6 +560,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1448193381}
+    - target: {fileID: 1308073361, guid: c33739211eba17941be4b53866513d61, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1779959876, guid: c33739211eba17941be4b53866513d61, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -660,10 +664,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1448193381}
+    - target: {fileID: 5913955464981899637, guid: c33739211eba17941be4b53866513d61, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8153664383407739566, guid: c33739211eba17941be4b53866513d61, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483573105}
+    - target: {fileID: 8153664383407739566, guid: c33739211eba17941be4b53866513d61, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c33739211eba17941be4b53866513d61, type: 3}
 --- !u!1001 &951438361643984789
@@ -742,6 +754,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1448193381}
+    - target: {fileID: 1100032665377688329, guid: bb5c610ba26dd314aa262d304c734882, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1100032666037775492, guid: bb5c610ba26dd314aa262d304c734882, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -846,6 +862,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 483573105}
+    - target: {fileID: 1100032666875873676, guid: bb5c610ba26dd314aa262d304c734882, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb5c610ba26dd314aa262d304c734882, type: 3}
 --- !u!1001 &1583876279990769055
@@ -1017,6 +1037,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6928294517022775304, guid: 0666a3a0dbdcf0c4ca0a163b02baaf42, type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928294517022775304, guid: 0666a3a0dbdcf0c4ca0a163b02baaf42, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928294517022775304, guid: 0666a3a0dbdcf0c4ca0a163b02baaf42, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6928294517022775306, guid: 0666a3a0dbdcf0c4ca0a163b02baaf42, type: 3}
       propertyPath: m_Name
       value: AudioManager

@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8319932871853823876
 Transform:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   firePoint: {fileID: 8319932872191243901}
   bullet: {fileID: 3760855507716058446, guid: 4f36b46c906dcac4a9a791f2a0761b3e, type: 3}
   bulletForce: 25
-  startingFireRate: 1.5
+  startingFireRate: 1.2
 --- !u!114 &8319932871853823878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5d092d8e33ab246ac22ab83ae607d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 7
+  hp: 8
   dead: 0
 --- !u!114 &667322295446920475
 MonoBehaviour:

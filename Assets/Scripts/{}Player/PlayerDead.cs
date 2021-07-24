@@ -10,7 +10,7 @@ public class PlayerDead : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
 
-    public GameObject text;
+    public GameObject restartCanvas;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class PlayerDead : MonoBehaviour
             dead = true;
             AudioManager.Instance.Play("Hurt");
             anim.SetBool("Dead", true);
-            text.SetActive(true);
+            restartCanvas.SetActive(true);
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             movementScript.moveSpeed = 0;
             Destroy(collision.gameObject);
