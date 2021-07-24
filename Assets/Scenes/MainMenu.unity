@@ -470,25 +470,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -609343558522643617, guid: 5225e5e7ba021ff47ba91c0a8d3e8b43, type: 3}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 549542508}
-    - target: {fileID: -609343558522643617, guid: 5225e5e7ba021ff47ba91c0a8d3e8b43, type: 3}
       propertyPath: speedrunTimer
       value: 
       objectReference: {fileID: 1148063144}
-    - target: {fileID: 2073293824, guid: 5225e5e7ba021ff47ba91c0a8d3e8b43, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073293824, guid: 5225e5e7ba021ff47ba91c0a8d3e8b43, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Keyboard&Mouse
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073293824, guid: 5225e5e7ba021ff47ba91c0a8d3e8b43, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: -609343558522643617, guid: 5225e5e7ba021ff47ba91c0a8d3e8b43, type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 549542508}
     - target: {fileID: 6732488038119964106, guid: 5225e5e7ba021ff47ba91c0a8d3e8b43, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.138651

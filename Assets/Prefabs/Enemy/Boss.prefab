@@ -257,9 +257,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8319932871853823876}
   - component: {fileID: 8319932871853823882}
-  - component: {fileID: 667322296997038070}
-  - component: {fileID: 8319932871853823873}
-  - component: {fileID: 667322296067118134}
   - component: {fileID: 8319932871853823883}
   - component: {fileID: 8319932871853823877}
   - component: {fileID: 8319932871853823878}
@@ -274,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8319932871853823876
 Transform:
   m_ObjectHideFlags: 0
@@ -316,52 +313,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &667322296997038070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8319932871853823880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 420726700e7e66a45935fe41d70110ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8319932871853823873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8319932871853823880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 900d8a182dc706848a1d0bc282316ea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTrigger: 0
-  speed: 3
-  startWaitTime: 5
-  patrolSpots: []
-  nextWaypointDistance: 0.2
-  lookTarget: {fileID: 0}
---- !u!114 &667322296067118134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8319932871853823880}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d65a9fae2e9074287728bce6b0131d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTrigger: 0
-  speed: 4
-  nextWaypointDistance: 0.1
-  target: {fileID: 0}
 --- !u!114 &8319932871853823883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,13 +320,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8319932871853823880}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6ebd58b7c9c29f4c97fdbc46b4947b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  nextWaypointDistance: 5
+  nextWaypointDistance: 1
 --- !u!114 &8319932871853823877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,8 +341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 8319932872191243901}
   bullet: {fileID: 3760855507716058446, guid: 4f36b46c906dcac4a9a791f2a0761b3e, type: 3}
-  bulletForce: 30
-  startingFireRate: 0.8
+  bulletForce: 25
+  startingFireRate: 1.5
 --- !u!114 &8319932871853823878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5d092d8e33ab246ac22ab83ae607d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 9
+  hp: 7
   dead: 0
 --- !u!114 &667322295446920475
 MonoBehaviour:

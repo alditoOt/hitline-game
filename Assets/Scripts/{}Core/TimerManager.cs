@@ -28,7 +28,6 @@ public class TimerManager : MonoBehaviourSingleton<TimerManager>
             minutes = ((int)elapsedTime / 60).ToString("00");
             seconds = ((int)elapsedTime % 60).ToString("00");
             milliseconds = ((int)((elapsedTime - Mathf.Floor(elapsedTime))*1000)).ToString("00");
-            Debug.Log(minutes + ":" + seconds + "." + milliseconds);
             timerText.text = minutes + ":" + seconds + "." + milliseconds;
         }
     }
