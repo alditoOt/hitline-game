@@ -19,4 +19,10 @@ public class PlayerRestart : MonoBehaviour
             AudioManager.Instance.Play("Restart");
         }
     }
+
+    void OnGameReset() {
+        Time.timeScale = 1f;
+        TimerManager.Instance.DisableSpeedrunTimer();
+        GameManager.Instance.BackToMenu();
+    }
 }

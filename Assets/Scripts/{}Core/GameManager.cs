@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     private GameObject boss;
     private GameObject screenTransitionStart;
 
+    public float currentFloor = 0f;
+
     private void Start()
     {
         AudioManager.Instance.Play("Music");
@@ -41,12 +43,18 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
+        currentFloor = 1f;
+       Cursor.lockState = CursorLockMode.Confined;
+    //    Cursor.visible = false;
         StartCoroutine(ScreenStartTimer(1));
     }
     public void BackToMenu()
     {
         AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
+        ResetFloor();
+        //  Cursor.lockState = CursorLockMode.None;
+        //  Cursor.visible = true;
         StartCoroutine(ScreenStartTimer(0));
     }
     #endregion
@@ -55,6 +63,11 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public void NextFloor()
     {
         screenTransitionStart.SetActive(true);
+        currentFloor++;
+        if (SceneManager.GetActiveScene().buildIndex == 10f) {
+            // Cursor.lockState = CursorLockMode.None;
+            // Cursor.visible = true;
+        } 
         StartCoroutine(ScreenStartTimer(SceneManager.GetActiveScene().buildIndex + 1));
     }
     public void RestartFloor()
@@ -94,5 +107,9 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public void PlayShootAudio()
     {
         AudioManager.Instance.Play("Shoot");
+    }
+
+    private void ResetFloor() {
+        currentFloor = 0f;
     }
 }

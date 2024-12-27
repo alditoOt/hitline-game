@@ -556,6 +556,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 837390802, guid: c33739211eba17941be4b53866513d61, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125.63218
+      objectReference: {fileID: 0}
+    - target: {fileID: 837390802, guid: c33739211eba17941be4b53866513d61, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -645.7356
+      objectReference: {fileID: 0}
+    - target: {fileID: 837390803, guid: c33739211eba17941be4b53866513d61, type: 3}
+      propertyPath: m_text
+      value: the esteban update
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295468573, guid: c33739211eba17941be4b53866513d61, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.0000305
+      objectReference: {fileID: 0}
     - target: {fileID: 1308073361, guid: c33739211eba17941be4b53866513d61, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
