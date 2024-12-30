@@ -11,7 +11,7 @@ public class EnemyLineOfSight : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("PlayerButItWorks").GetComponent<Transform>();
         anim = GetComponentInParent<Animator>();
     }
 
@@ -21,7 +21,7 @@ public class EnemyLineOfSight : MonoBehaviour
         if(hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-            if(hitInfo.collider.CompareTag("Player"))
+            if(hitInfo.collider.CompareTag("PlayerWallCollider"))
             {
                 anim.SetBool("InSight", true);
             }
@@ -38,7 +38,7 @@ public class EnemyLineOfSight : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("PlayerButItWorks"))
         {
             LineOfSight();
         }   
@@ -46,7 +46,7 @@ public class EnemyLineOfSight : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("PlayerButItWorks"))
         {
             StopCoroutine(SightTimer());
             StartCoroutine(SightTimer());

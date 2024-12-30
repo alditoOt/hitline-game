@@ -8,12 +8,12 @@ public class AmmoPickup : MonoBehaviour
 
     private void Start()
     {
-        shootScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>();
+        shootScript = GameObject.FindGameObjectWithTag("PlayerButItWorks").GetComponent<Shooting>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("PlayerButItWorks"))
         {
             shootScript.ammo = shootScript.maxAmmo;
             Destroy(this.gameObject);

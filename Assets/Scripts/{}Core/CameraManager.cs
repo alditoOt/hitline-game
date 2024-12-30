@@ -9,7 +9,7 @@ public class CameraManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("PlayerButItWorks"))
         {
             cam.gameObject.SetActive(true);
         }
@@ -17,7 +17,7 @@ public class CameraManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("PlayerButItWorks"))
         {
             cam.gameObject.SetActive(false);
         }

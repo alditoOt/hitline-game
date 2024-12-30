@@ -13,7 +13,7 @@ public class ScreenTransitionManager : MonoBehaviour
 
     public void DisablePlayerInput()
     {
-        var player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindWithTag("PlayerButItWorks");
         if(player != null)
         {
             player.GetComponent<PlayerInput>().enabled = false;
@@ -22,6 +22,8 @@ public class ScreenTransitionManager : MonoBehaviour
 
     public void EnablePlayerInput()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>().enabled = true;
+        GameObject player = GameObject.FindWithTag("PlayerButItWorks");
+        Debug.Log(player);
+        Debug.Log(player.GetComponent<PlayerMovement>());
     }
 }

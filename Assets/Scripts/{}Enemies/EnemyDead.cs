@@ -7,6 +7,7 @@ public class EnemyDead : MonoBehaviour
     private Animator anim;
     private Collider2D[] enemyCollider;
     private Rigidbody2D rb;
+    [SerializeField]
     private Shooting shootScript;
 
     public int hp = 1;
@@ -17,7 +18,7 @@ public class EnemyDead : MonoBehaviour
         enemyCollider = GetComponents<Collider2D>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        shootScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>();
+        shootScript = GameObject.FindGameObjectWithTag("PlayerButItWorks").GetComponent<Shooting>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

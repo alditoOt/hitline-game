@@ -53,8 +53,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void DoMove()
     {
-        rb.velocity = new Vector2(move.x * moveSpeed, move.y * moveSpeed);
-        anim.SetFloat("speed", Mathf.Abs(rb.velocity.x) + Mathf.Abs(rb.velocity.y));
+        rb.linearVelocity = new Vector2(move.x * moveSpeed, move.y * moveSpeed);
+        anim.SetFloat("speed", Mathf.Abs(rb.linearVelocity.x) + Mathf.Abs(rb.linearVelocity.y));
     }
 
     #endregion

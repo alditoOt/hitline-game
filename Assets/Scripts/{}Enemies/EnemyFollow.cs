@@ -19,7 +19,7 @@ public class EnemyFollow : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        target = GameObject.FindGameObjectWithTag("PlayerButItWorks").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
 
