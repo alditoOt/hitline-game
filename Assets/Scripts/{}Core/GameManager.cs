@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
-        //  Cursor.lockState = CursorLockMode.None;
+         Cursor.lockState = CursorLockMode.None;
         //  Cursor.visible = true;
         StartCoroutine(ScreenStartTimer(0));
     }

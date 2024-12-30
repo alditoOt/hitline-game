@@ -25,8 +25,12 @@ public class EnemyDead : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("PlayerBullet"))
         {
-            hp--;
+            if (collision.gameObject.GetComponent<Bullet>().IsHitTarget()) {
+                return;
+            }
+            collision.gameObject.GetComponent<Bullet>().SetHitTarget(true);
             Destroy(collision.gameObject);
+            hp--;
             if(hp <= 0)
             {
                 if(!anim.GetBool("Dead"))
