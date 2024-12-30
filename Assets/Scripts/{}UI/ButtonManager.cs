@@ -30,11 +30,6 @@ public class ButtonManager : MonoBehaviour
     {
         TimerManager.Instance.BeginTimer();
     }
-    public void SetBlood()
-    {
-        AudioManager.Instance.Play("Shoot");
-        VariablesManager.Instance.bloodToggle = !VariablesManager.Instance.bloodToggle;
-    }
 
     public void SetSpeedrunTimer()
     {
@@ -56,14 +51,7 @@ public class ButtonManager : MonoBehaviour
         {
             speedrunTimerText.text = "Speedrun timer: no";
         }
-        if(VariablesManager.Instance.bloodToggle)
-        {
-            bloodText.text = "Show blood: yes";
-        }
-        else
-        {
-            bloodText.text = "Show blood: no";
-        }    }
+    }
 
     public void DisableSpeedrunTimer()
     {

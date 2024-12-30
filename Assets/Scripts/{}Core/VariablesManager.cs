@@ -5,5 +5,4 @@ using UnityEngine;
 public class VariablesManager : MonoBehaviourSingleton<VariablesManager>
 {
     public bool speedrunTimer = false;
-    public bool bloodToggle = false;
 }

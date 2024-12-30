@@ -43,8 +43,8 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
         currentFloor = 1f;
-       Cursor.lockState = CursorLockMode.Confined;
     //    Cursor.visible = false;
         StartCoroutine(ScreenStartTimer(1));
     }
@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     {
         AudioManager.Instance.Play("Shoot");
         screenTransitionStart.SetActive(true);
-        ResetFloor();
         //  Cursor.lockState = CursorLockMode.None;
         //  Cursor.visible = true;
         StartCoroutine(ScreenStartTimer(0));
@@ -63,7 +62,6 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     public void NextFloor()
     {
         screenTransitionStart.SetActive(true);
-        currentFloor++;
         if (SceneManager.GetActiveScene().buildIndex == 10f) {
             // Cursor.lockState = CursorLockMode.None;
             // Cursor.visible = true;
@@ -78,6 +76,9 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
     IEnumerator ScreenStartTimer(int screen)
     {
         yield return new WaitForSeconds(1.1f);
+        if (screen != 1f) {
+            currentFloor = screen;
+        }
         SceneManager.LoadScene(screen);
     }
     #endregion
@@ -109,7 +110,7 @@ public class GameManager : MonoBehaviourSingleton<GameManager>
         AudioManager.Instance.Play("Shoot");
     }
 
-    private void ResetFloor() {
-        currentFloor = 0f;
+    public void EndScreen() {
+        currentFloor = 10f;
     }
 }
